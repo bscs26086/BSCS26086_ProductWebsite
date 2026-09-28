@@ -1,0 +1,818 @@
+/* =====================================
+   BASIC SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f3ef;
+    color: #403e3e;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    background-color: #403e3e;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* Website Logo */
+
+.logo {
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+
+/* Navigation Links */
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    padding: 10px 5px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover Effect */
+
+.navbar nav a:hover {
+    color: #e5cfc0;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    width: 100%;
+
+    height: 600px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Hero Image */
+
+.hero img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Dark transparent layer */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.18);
+}
+
+
+/* Text on Hero */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    color: white;
+
+    z-index: 2;
+
+    width: 80%;
+}
+
+
+/* LUMORA heading */
+
+.hero-overlay h1 {
+    font-size: 75px;
+
+    letter-spacing: 12px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Tagline */
+
+.hero-overlay p {
+    font-size: 22px;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================
+   EXPLORE PRODUCTS SECTION
+===================================== */
+
+.explore {
+    padding: 80px 7%;
+}
+
+
+/* Image container */
+
+.explore-card {
+    width: 100%;
+
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Explore image */
+
+.explore-card img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Dark overlay */
+
+.explore-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+/* Text over image */
+
+.explore-overlay {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: white;
+
+    width: 75%;
+
+    padding: 35px;
+
+    background: rgba(64, 62, 62, 0.55);
+
+    border-radius: 15px;
+}
+
+
+/* Explore heading */
+
+.explore-overlay h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Explore paragraph */
+
+.explore-overlay p {
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   PRODUCT BUTTON
+===================================== */
+
+.button {
+    display: inline-block;
+
+    background-color: white;
+
+    color: #403e3e;
+
+    text-decoration: none;
+
+    padding: 13px 30px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+/* Button hover */
+
+.button:hover {
+    background-color: #e5cfc0;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background-color: #403e3e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+
+/* Footer logo */
+
+footer h2 {
+    font-size: 27px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Footer information */
+
+footer p {
+    margin: 7px;
+
+    font-size: 15px;
+}
+
+
+/* Copyright */
+
+.copyright {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #777;
+
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+
+/* =====================================
+   MOBILE SCREEN
+===================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+
+    .hero {
+        height: 500px;
+    }
+
+
+    .hero-overlay h1 {
+        font-size: 45px;
+
+        letter-spacing: 6px;
+    }
+
+
+    .hero-overlay p {
+        font-size: 16px;
+    }
+
+
+    .explore {
+        padding: 50px 20px;
+    }
+
+
+    .explore-card {
+        height: 450px;
+    }
+
+
+    .explore-overlay {
+        width: 90%;
+
+        padding: 25px;
+    }
+
+
+    .explore-overlay h2 {
+        font-size: 30px;
+    }
+
+
+    .explore-overlay p {
+        font-size: 15px;
+    }
+
+}
+/* =====================================
+PRODUCTS PAGE
+===================================== */
+
+.products-page {
+padding: 70px 7%;
+background-color: #f7f3ef;
+min-height: 700px;
+}
+
+.products-page h1 {
+text-align: center;
+font-size: 48px;
+margin-bottom: 15px;
+letter-spacing: 2px;
+}
+
+.products-intro {
+text-align: center;
+font-size: 17px;
+margin-bottom: 50px;
+}
+
+/* Products container */
+
+.products-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 35px;
+}
+
+/* Product card */
+
+.product-card {
+background-color: white;
+border-radius: 15px;
+overflow: hidden;
+
+```
+box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.10);
+
+transition: 0.3s;
+```
+
+}
+
+/* Product card hover */
+
+.product-card:hover {
+transform: translateY(-5px);
+
+```
+box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+```
+
+}
+
+/* Product image */
+
+.product-card img {
+width: 100%;
+height: 300px;
+
+```
+object-fit: cover;
+
+display: block;
+```
+
+}
+
+/* Product information */
+
+.product-info {
+padding: 25px;
+text-align: center;
+}
+
+.product-info h2 {
+font-size: 25px;
+margin-bottom: 12px;
+}
+
+.product-info p {
+font-size: 15px;
+line-height: 1.6;
+margin-bottom: 15px;
+}
+
+.product-info h3 {
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+/* Product button */
+
+.product-info .button {
+cursor: pointer;
+}
+
+/* =====================================
+PRODUCTS PAGE MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+```
+.products-page {
+    padding: 50px 20px;
+}
+
+.products-page h1 {
+    font-size: 36px;
+}
+
+.products-container {
+    grid-template-columns: 1fr;
+}
+
+.product-card img {
+    height: 280px;
+}
+```
+
+}
+/* =====================================
+ABOUT US PAGE
+===================================== */
+
+.about-page {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+
+```
+padding: 80px 7%;
+
+align-items: center;
+
+background-color: #f7f3ef;
+```
+
+}
+
+/* About image */
+
+.about-image img {
+width: 100%;
+height: 500px;
+
+```
+object-fit: cover;
+
+border-radius: 18px;
+
+display: block;
+
+box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+```
+
+}
+
+/* About text */
+
+.about-content {
+padding: 20px;
+}
+
+.about-content h1 {
+font-size: 48px;
+
+```
+margin-bottom: 25px;
+
+letter-spacing: 2px;
+```
+
+}
+
+.about-content p {
+font-size: 17px;
+
+```
+line-height: 1.8;
+
+margin-bottom: 18px;
+```
+
+}
+
+/* =====================================
+CONTACT PAGE
+===================================== */
+
+.contact-page {
+padding: 80px 7%;
+
+```
+background-color: white;
+
+text-align: center;
+```
+
+}
+
+.contact-page > h1 {
+font-size: 45px;
+
+```
+margin-bottom: 15px;
+
+letter-spacing: 2px;
+```
+
+}
+
+.contact-page > p {
+font-size: 17px;
+
+```
+margin-bottom: 50px;
+```
+
+}
+
+/* Contact layout */
+
+.contact-container {
+display: grid;
+
+```
+grid-template-columns: 1fr 1fr;
+
+gap: 50px;
+
+max-width: 1000px;
+
+margin: auto;
+
+text-align: left;
+```
+
+}
+
+/* Contact information */
+
+.contact-info {
+background-color: #f7f3ef;
+
+```
+padding: 40px;
+
+border-radius: 18px;
+```
+
+}
+
+.contact-info h2 {
+font-size: 30px;
+
+```
+margin-bottom: 25px;
+```
+
+}
+
+.contact-info p {
+font-size: 16px;
+
+```
+margin-bottom: 18px;
+
+line-height: 1.6;
+```
+
+}
+
+/* =====================================
+CONTACT FORM
+===================================== */
+
+.contact-form {
+display: flex;
+
+```
+flex-direction: column;
+
+gap: 10px;
+```
+
+}
+
+.contact-form label {
+font-size: 15px;
+
+```
+font-weight: bold;
+
+margin-top: 5px;
+```
+
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+
+```
+padding: 13px;
+
+border: 1px solid #ccc;
+
+border-radius: 8px;
+
+font-family: Arial, Helvetica, sans-serif;
+
+font-size: 15px;
+
+outline: none;
+```
+
+}
+
+.contact-form textarea {
+resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+border-color: #403e3e;
+}
+
+.contact-form .button {
+border: none;
+
+```
+margin-top: 15px;
+
+cursor: pointer;
+```
+
+}
+
+/* =====================================
+CONTACT PAGE MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+```
+.about-page {
+    grid-template-columns: 1fr;
+
+    padding: 50px 20px;
+
+    gap: 30px;
+}
+
+.about-image img {
+    height: 400px;
+}
+
+.about-content h1 {
+    font-size: 36px;
+}
+
+.about-content p {
+    font-size: 15px;
+}
+
+.contact-page {
+    padding: 50px 20px;
+}
+
+.contact-page > h1 {
+    font-size: 36px;
+}
+
+.contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+}
+```
+
+}
